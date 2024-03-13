@@ -21,5 +21,12 @@ pub fn create_account(user_list: &mut HashMap<Uuid, User>) {
     let mut password: String = String::new();
     stdin().read_line(&mut password).unwrap();
     let uuid: Uuid = Uuid::new_v4();
-    user_list.insert(uuid, User {id: uuid, name: name, password: password});
+    user_list.insert(
+        uuid,
+        User {
+            id: uuid,
+            name: name,
+            password: password,
+        },
+    );
 }
